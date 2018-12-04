@@ -26,7 +26,8 @@ ReadMe File
   python main.py --mode train --para_limit 2250 --batch_size 24 --init_lr 0.1 --keep_prob 1.0 --sp_lambda 1.0  
   note: you can change your batch-size to 12 or less to make your GPU working. Please make sure your GPU and CPU are working concurrently, only CPU or GPU will help you finish the traing process  
     
-  We set the checkpoint every 1000 steps as shown down below in the red box. According to experiment, the whole will converge after 5 epochs and the training loss will stay more or less at 2.00. 
+  We set the checkpoint every 1000 steps as shown down below in the form of HOTPOT-########-######. According to experiment, the whole will converge after 5 epochs and the training loss will stay more or less at 2.00.   
+  ![Alt text](/image.png)  
   After the training process, the program will generate a new json file: dev_distractor_pred.json which is useful to to the evaluation  
 6. evaluation  
   main.py --mode test --data_split dev --para_limit 2250 --batch_size 24 --init_lr 0.1 --keep_prob 1.0 --sp_lambda 1.0 --save HOTPOT-20180924-160521 --prediction_file dev_distractor_pred.json
